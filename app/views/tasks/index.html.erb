@@ -1,0 +1,22 @@
+
+<h2>Your Task List</h2>
+
+<% @tasks.each do |task| %>
+<ul class="list-inline">
+  <li class="list-inline-item">
+    <p><%= link_to task.name, task_path(task) %></p>
+  </li>
+  <li class="list-inline-item">
+    <p><%= task.due %></p>
+  </li>
+  <li class="list-inline-item">
+    <p><%= link_to "Edit this task", edit_task_path(task) %></p>
+  </li>
+  <li class="list-inline-item">
+    <p><%= link_to "Delete this task", task_path(task), 
+      method: :delete, data: {confirm: "Are you sure?"} %></p>
+  </li>
+<% end %>
+</ul>
+<%= link_to "Create new task", new_task_path %>
+

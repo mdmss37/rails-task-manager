@@ -1,0 +1,12 @@
+<!-- TODO - create partial form -->
+<%= form_for(@task) do |f| %>
+  <%= f.label :name %>
+  <%= f.text_field :name %>
+  <%= f.label :due %>
+  <%= datetime_field(:task, :due) %>
+  
+  <%= check_box_tag(:done) %>
+  <%= label_tag(:done, "Task Done") %>
+
+  <%= f.submit %>
+<% end %>

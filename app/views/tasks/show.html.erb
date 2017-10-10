@@ -1,0 +1,9 @@
+
+<ul class="list-group">
+  <li class="list-group-item"><%= @task.name %></li>
+  <li class="list-group-item"><%= @task.due %></li>
+  <li class="list-group-item"><%= @done %></li>
+</ul>
+
+<%= link_to "Edit this task", edit_task_path(@task) %>
+<%= link_to "Back to Task List", tasks_path %>

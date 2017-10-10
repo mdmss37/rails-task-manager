@@ -5,3 +5,6 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+require 'date'
+Task.create({name: "Shopping", due: DateTime.new(2001,2,3,4,5,6), done: false })
+Task.create({name: "Hospital", due: DateTime.new(2017,2,3,4,5,6), done: false })
